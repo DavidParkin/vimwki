@@ -3,7 +3,6 @@
     * [[System parameter changes]]
     * [[Pomodoro]]
     * [[Xdebug]]
-    
     * [[Android]]
     * [[Current/overnight break]]
     * [[Borg]]
