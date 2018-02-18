@@ -3,9 +3,6 @@
     * [[System parameter changes]]
     * [[Pomodoro]]
     * [[Xdebug]]
-    *   port 9000
-    *   [David@localhost mongo-blog]$ export XDEBUG_CONFIG="idekey=David remote_enable=1"
-        [David@localhost mongo-blog]$ php address.php  
     
     * [[Android]]
     * [[Current/overnight break]]
