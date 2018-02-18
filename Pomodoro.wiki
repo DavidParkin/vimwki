@@ -1,0 +1,37 @@
+Auto start routine:
+            self.start_timer()
+            self.pomodoro.start()
+            self.redraw_menu()
+Pressing start button:
+        self.start_timer()
+        self.pomodoro.start()
+        self.ind.set_icon(self.active_icon())
+        self.redraw_menu()
+
+Icons
+    def generate_notification(self):
+        if self.current_state() == pomodoro_state.WORKING_STATE:
+            self.ind.set_status(appindicator.STATUS_ACTIVE)          currently RED
+        elif self.current_state() == pomodoro_state.RESTING_STATE:
+            self.ind.set_status(appindicator.STATUS_ATTENTION)                 GREY
+        elif self.current_state() == pomodoro_state.LONG_RESTING_STATE:
+            self.ind.set_status(appindicator.STATUS_ATTENTION)
+
+        === Must set these states to change icon ===
+        
+        Where is state.WAITING ?
+
+        3 States in package
+            * PASSIVE
+            * ACTIVE
+            * ATTENTION
+            
+ ===Indicator===
+ appindicator_replacement.py appears to offer basic functionality
+        * What does it interface to?
+    
+==[[TaskWarrior]]==
+
+ 
+
+        

@@ -1,0 +1,17 @@
+# Web Assets
+3.1 version
+edit this page
+
+Web assets are things like CSS, JavaScript and image files that make the frontend of your site look and work great. Symfony developers have traditionally stored these assets in the Resources/public/ directory of each bundle.
+
+Best Practice
+
+Store your assets in the web/ directory
+
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+
+{# ... #}
+
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>

@@ -1,0 +1,20 @@
+New kernel 
+Source
+Packaged Samurai
+Compatible Rom
+Decide on apps don't want all google crap
+
+Current set up.
+Method of installation：
+
+1. Download the "cwm0824.zip" and place in SD card-
+
+2. Download cwm (ClockWorkRec5830i.zip) and place in sd card - http://forum.xda-developers.com/show....php?t=1552792
+
+3. Switch off the phone. Press sound up + home and power button together to got to Samsung recovery mode.
+
+4. Select "apply update from sdcard" ----->and choose ClockWorkRec5830i.zip. CWM will load.
+
+5. Select "apply update from sdcard" and select the "cwm0824"
+6. cwm0824.zip is current (dev/blm7)
+7. file:///home/David/Kernel-cooperve/50-EXT4-boot.img.zip 

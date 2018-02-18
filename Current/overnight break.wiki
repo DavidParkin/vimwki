@@ -1,0 +1,1 @@
+Highlight ff extension works by attaching a style sheet and altering the attribute on 'tab' element in html.
