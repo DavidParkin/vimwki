@@ -8,4 +8,7 @@ xdebug.remote_autostart="0"
 xdebug.remote_log="/tmp/xdebug_remote.log" 
  
 ; see http://xdebug.org/docs/all_settings
+port 9000
+$ export XDEBUG_CONFIG="idekey=David remote_enable=1"
+$ php address.php  
 
