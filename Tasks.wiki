@@ -1,7 +1,4 @@
----
-display_metadata: false
-title: TO DO list
----
+<!-- --- title: TO DO List --> 
 Tasks
     * [ ] task one  #63d7ee4c
     * Added [[line]]
