@@ -1,9 +1,9 @@
 <!-- --- title: TO DO List --> 
 Tasks
-    * [ ] task one  #63d7ee4c
-    * Added [[line]]
-    * [ ] task two  #2598a229
-    * Info for task [[two]]
-        * [ ] task two a  #f6b84746
-        * [ ] task two b  #c2dc9bee Notes  #211  #1198c29f
-    * [ ] task three  #9f3cff6c
+    - [X] task one  #63d7ee4c
+    - Added [[line]]
+    - [ ] task two  #2598a229
+    - Info for task [[two]]
+        - [ ] task two a  #f6b84746
+        - [ ] task two b  #c2dc9bee Notes  #211  #1198c29f
+    - [ ] task three  #9f3cff6c
