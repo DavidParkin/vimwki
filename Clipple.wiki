@@ -1,0 +1,6 @@
+# Clipple Notes
+* Bootstrapped extensions — https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Bootstrapped_extensions
+* Debug Add-on Debugger — https://developer.mozilla.org/en-US/Add-ons/Add-on_Debugger
+* 
+
+
