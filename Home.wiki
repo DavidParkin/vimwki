@@ -1,1 +1,16 @@
-index.wiki
+# My knowledge base #
+
+  
+ 
+* [[Tasks]] -- things to be done _yesterday_!!!    
+* [[System parameter changes]]
+* [[Pomodoro]]
+* [[Xdebug]]
+* [[Android]]
+* [[Current/overnight break]]
+* [[Borg]]
+* [[Firefox]]
+* [[Clipple]]
+* [test](test)
+* [new](new)
+
