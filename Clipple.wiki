@@ -1,6 +1,20 @@
 # Clipple Notes
 * Bootstrapped extensions — https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Bootstrapped_extensions
 * Debug Add-on Debugger — https://developer.mozilla.org/en-US/Add-ons/Add-on_Debugger
-* 
+~                                                                                                                                                  
+                                                                                                                                      
+Error detected while processing function vimwiki#html#Wiki2HTML[1]..<SNR>124_convert_file[15]..vimwiki#html#CustomWiki2HTML[2]..VimwikiGet:
+line    9:
 
+[E716](E716): Key not present in Dictionary: custom_wiki2html_args
+E15: Invalid expression: b:vimwiki_list[a:option]
+line   13:
+E121: Undefined variable: val
+E15: Invalid expression: val
+line    9:
+E716: Key not present in Dictionary: custom_wiki2html_args
+E15: Invalid expression: b:vimwiki_list[a:option]
+line   13:
+E121: Undefined variable: val
+E15: Invalid expression: val
 

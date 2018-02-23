@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Symfony</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<ol>
+<li>
+Web Assets
+
+</ol>
+<p>
+3.1 version
+edit this page
+</p>
+
+<p>
+Web assets are things like CSS, JavaScript and image files that make the frontend of your site look and work great. Symfony developers have traditionally stored these assets in the Resources/public/ directory of each bundle.
+</p>
+
+<p>
+Best Practice
+</p>
+
+<p>
+Store your assets in the web/ directory
+</p>
+
+<p>
+&lt;link rel="stylesheet" href="<img src="../vimwiki/ asset('css/bootstrap.min.css') " />" /&gt;
+&lt;link rel="stylesheet" href="<img src="../vimwiki/ asset('css/main.css') " />" /&gt;
+</p>
+
+<p>
+{# ... #}
+</p>
+
+<p>
+&lt;script src="<img src="../vimwiki/ asset('js/jquery.min.js') " />"&gt;&lt;/script&gt;
+&lt;script src="<img src="../vimwiki/ asset('js/bootstrap.min.js') " />"&gt;&lt;/script&gt;
+</p>
+
+</body>
+</html>

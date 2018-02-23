@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Pomodoro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<p>
+Auto start routine:
+</p>
+<blockquote>
+self.start_timer()
+self.pomodoro.start()
+self.redraw_menu()
+</blockquote>
+<p>
+Pressing start button:
+</p>
+<blockquote>
+self.start_timer()
+self.pomodoro.start()
+self.ind.set_icon(self.active_icon())
+self.redraw_menu()
+</blockquote>
+
+<p>
+Icons
+</p>
+<blockquote>
+def generate_notification(self):
+if self.current_state() == pomodoro_state.WORKING_STATE:
+self.ind.set_status(appindicator.STATUS_ACTIVE)          currently RED
+elif self.current_state() == pomodoro_state.RESTING_STATE:
+self.ind.set_status(appindicator.STATUS_ATTENTION)                 GREY
+elif self.current_state() == pomodoro_state.LONG_RESTING_STATE:
+self.ind.set_status(appindicator.STATUS_ATTENTION)
+</blockquote>
+
+<div id="Must set these states to change icon"><h3 id="Must set these states to change icon" class="justcenter">Must set these states to change icon</h3></div>
+<blockquote>
+Where is state.WAITING ?
+</blockquote>
+<blockquote>
+3 States in package
+</blockquote>
+<ul>
+<li>
+PASSIVE
+
+<li>
+ACTIVE
+
+<li>
+ATTENTION
+
+</ul>
+            
+<div id="Indicator"><h3 id="Indicator" class="justcenter">Indicator</h3></div>
+<p>
+ appindicator_replacement.py appears to offer basic functionality
+</p>
+<ul>
+<li>
+What does it interface to?
+
+</ul>
+    
+<div id="[[TaskWarrior]]"><h2 id="[[TaskWarrior]]"><a href="TaskWarrior.html">TaskWarrior</a></h2></div>
+
+</body>
+</html>
