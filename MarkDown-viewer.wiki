@@ -1,0 +1,43 @@
+#Markdown Viewer
+##Problems with running from source
+
+    - [X] Start test and observe errors  
+          None seen
+    - [X] Check addon installed y/n  
+          Installed disabled
+    - [X] verify  
+          Not working
+    - [X] Enable  
+          Works, including Firefox.md with nice checkboxes
+          
+          
+    - [X] Disable and restart  
+          Promise resolved while context is inactive ???
+    - [X] Install from source  
+    - [X] Test  
+          Screen goes blank as with installed version
+          Never returns
+    - [X] Remove  
+          Text returns
+    - [X] Enable installed version  
+          After enabling html returns
+         
+    - [ ] Debug  
+          Starts ok 
+          Most of the action goes in
+```
+          function processMarkdown(textContent)  
+          
+```  
+          
+
+          
+##Rinse and repeat with source  
+ 
+    - [ ] Disable
+    - [ ] Set up source
+    - [ ] attempt debug from page  
+          js modules not found ???
+    - [ ] Used build.sh
+    - [ ] missing libraries  
+          [[file:~/Desktop/lib]]

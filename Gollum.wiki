@@ -1,0 +1,3 @@
+=Trying Gollum
+wiki_options seems to have relevant bit
+Precious::App.settings.wiki_options[:index_page] = "index"
