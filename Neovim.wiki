@@ -1,5 +1,47 @@
-#NeoVim
+﻿#NeoVim
 ## New Plugin Structure
 
-$ ls ~/.local/share/nvim/site/pack/foo/start/vimwiki                                                     23:33 Thu 22  Inbox 1
+$ ls ~/.local/share/nvim/site/pack/foo/start/vimwiki
 autoload  doc  ftplugin  plugin  README-cn.md  README.md  syntax
+
+Did this plugin work realname doesn't  
+
+```
+tree solarize       
+solarize
+├── plugin
+│   ├── autoload
+│   │   └── togglebg.vim
+│   ├── bitmaps
+│   │   └── togglebg.png
+│   ├── colors
+│   │   └── solarized.vim
+│   ├── doc
+│   │   ├── solarized.txt
+│   │   └── tags
+│   └── README.mkd
+└── vim-colors-solarized
+    ├── autoload
+    │   └── togglebg.vim
+    ├── bitmaps
+    │   └── togglebg.png
+    ├── colors
+    │   └── solarized.vim
+    ├── doc
+    │   ├── solarized.txt
+    │   └── tags
+    └── README.mkd
+```	
+Neovim (use $XDG_CONFIG_HOME in place of ~/.config if set on your system):
+
+git clone https://github.com/k-takata/minpac.git \
+    ~/.config/nvim/pack/minpac/opt/minpac](https://github.com/k-takata/minpac)
+
+
+[Installation
+
+Minpac should be installed under pack/minpac/opt/ in the first directory in the 'packpath' option. 
+Plugins installed under pack/*/start/ are automatically added to the 'runtimepath' after .vimrc is sourced. 
+However, minpac needs to be loaded before that. Therefore, minpac should be installed under "opt" directory, 
+and should be loaded using packadd minpac.
+https://github.com/k-takata/minpac

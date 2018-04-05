@@ -1,43 +1,86 @@
-#Markdown Viewer
-##Problems with running from source
+# Markdown Viewer
 
-    - [X] Start test and observe errors  
-          None seen
-    - [X] Check addon installed y/n  
-          Installed disabled
-    - [X] verify  
-          Not working
-    - [X] Enable  
-          Works, including Firefox.md with nice checkboxes
-          
-          
-    - [X] Disable and restart  
-          Promise resolved while context is inactive ???
-    - [X] Install from source  
-    - [X] Test  
-          Screen goes blank as with installed version
-          Never returns
-    - [X] Remove  
-          Text returns
-    - [X] Enable installed version  
-          After enabling html returns
-         
-    - [ ] Debug  
-          Starts ok 
-          Most of the action goes in
-```
-          function processMarkdown(textContent)  
-          
-```  
-          
+## Best option is to write new module
 
-          
-##Rinse and repeat with source  
- 
-    - [ ] Disable
-    - [ ] Set up source
-    - [ ] attempt debug from page  
-          js modules not found ???
-    - [ ] Used build.sh
-    - [ ] missing libraries  
-          [[file:~/Desktop/lib]]
+Done as markdown-it-vimwiki\
+
+Prototype exists in testgoll as index.js  
+Scripts are render and render2 (js)  
+Currently handles `[[link]] and [[link|test]]`  
+
+
+## TODO
+- [X] Browserify
+- [X] Settle tabs versus spaces  
+	  JS now ts=2, eslintrc expects tabs and SuperRetab installed as pack plugin see
+	  [[Neovim]]
+- [X] Single versus double quotes  
+	  Single
+- [X] Needs copying and Git setting up
+- [X] Doesn't work with spaces in link  
+		  Gets `[[Markdown Viewer]]` etc  
+		  Suspect match yes, still a problem with generated links  
+		  Actually plugin still passing inline code to regex added test above. Block code not affected.
+		  and probaby with urls
+- [X] Needs suffix changing from html to wiki
+- [ ] Default encoding is Western instead of unicode problem with lack of html header?  
+			Needs meta adding to extension see content.js
+			Still a problem with Firefox
+- [X] Shortens first line loses words after link
+		Text not caught in regex  
+		How should this be returned?
+		Pass after link <link_open><text><link_close><text> ✓
+- [X] Need to pass suffix .wiki/.md/.html(?) as an option
+
+## Regex
+	pattern = /\[{2}(\w+)((\|)(\w+))?\]{2}/i;
+	pattern = /\[\[([A-Za-z1-9 ]+)?\|?(\w+)?/; Still unable to define space
+
+	```js
+		/*global module */
+
+		module.exports = function(md, options) {
+		  "use strict";
+		  md.core.ruler.push("checkbox", checkboxReplace(md, options));
+		};
+	```
+
+
+	```js
+		MarkdownIt.prototype.use = function (plugin /*, params, ... */) {
+		var args = [ this ].concat(Array.prototype.slice.call(arguments, 1));
+		plugin.apply(plugin, args);
+		return this;
+	```
+
+
+## The Gubbins  
+
+	```js
+		return Plugin(
+		/\[\[([\w\s/]+)(\|([\w\s/]+))?\]\]/,
+		(match, utils) => { — https://github.com/jsepia/markdown-it-wikilinks/blob/master/index.js
+	```
+
+
+## Installing local node
+
+    Clone the repo
+
+     git clone https://github.com/oortcloud/meteorite.git
+
+    And install it globally with:
+
+     npm install -g ./meteorite
+
+Tip:
+
+One can also install in the same manner the repo to a local npm project with:
+
+     npm install ../meteorite
+
+And also one can create a link to the repo, in case a patch in development is needed:
+
+     npm link ../meteorite  
+	 
+ (https://stackoverflow.com/questions/5786433/how-to-install-a-node-js-module-without-using-npm)

@@ -2,7 +2,7 @@
 
   
  
-* [[Tasks]] -- things to be done _yesterday_!!!    
+* [[Tasks]]  things to be done _yesterday_!!!    
 * [[System parameter changes]]
 * [[Pomodoro]]
 * [[Xdebug]]
@@ -15,5 +15,4 @@
 * [[Neovim]]
 * [[Gollum]]
 * [[MarkDown-viewer]]
-* 
 
