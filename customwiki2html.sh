@@ -43,7 +43,8 @@ FORCEFLAG=
 [ $SYNTAX = "markdown" ] || { echo "Error: Unsupported syntax"; exit -2; };
 
 OUTPUT="$OUTPUTDIR"/$(basename "$INPUT" .$EXTENSION).html
-
+echo $OUTPUTDIR
+echo $OUTPUT
 # # Method 1:
 # # markdown [-d] [-T] [-V] [-b url-base] [-C prefix] [-F bitmap] [-f flags] [-o file] [-s text] [-t text] [textfile]
 # 

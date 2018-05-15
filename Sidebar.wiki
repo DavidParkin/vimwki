@@ -1,0 +1,9 @@
+- [ ] Load scripts:
+	- [ ] how to tell if they are loaded
+	You can give your dynamically loaded script a name so that it shows in the Chrome/Firefox JavaScript debugger.   
+	To do this you place a comment at the end of the script:
+```
+	//# sourceURL=filename.js
+```
+	(https://stackoverflow.com/questions/9092125/how-to-debug-dynamically-loaded-javascript-with-jquery-in-the-browsers-debugg)
+	- [ ] trial add methods from markdown viewer

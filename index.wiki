@@ -7,12 +7,15 @@
 * [[Pomodoro]]
 * [[Xdebug]]
 * [[Android]]
-* [[Current/overnight break]]
 * [[Borg]]
 * [[Firefox]]
+* [[Firefox-scripting]]
 * [[Clipple]]
 * [test](test)
 * [[Neovim]]
 * [[Gollum]]
 * [[MarkDown-viewer]]
-
+* [[/Main/Wiki Link ]]
+* [[Test Space]]
+* [[Sidebar]]
+ 

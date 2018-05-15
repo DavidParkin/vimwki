@@ -1,1 +1,1 @@
-A test diary note.
+# A test diary note.

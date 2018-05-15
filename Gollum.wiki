@@ -1,3 +1,10 @@
 # Trying Gollum
 wiki_options seems to have relevant bit
 Precious::App.settings.wiki_options[:index_page] = "index"
+
+Two config.rb  
+one in testgoll (better) one in vimwiki
+
+- [ ] Try rid of wiki format
+- [ ] and use .md version of
+- [ ] See if list is recognised

@@ -1,0 +1,40 @@
+#JavaScript!
+
+For WebExtensions, all APIs live in the browser namespace.  
+This means, that your scripts have access to an JavaScript object called browser
+which has methods for all default APIs and for all APIs that you have granted 
+permissions to through the manifest.
+So, for example, if you would want to open a new tab from one of your scripts you could write
+```js
+	browser.tabs.create({});
+```
+
+
+    Background Scripts are the highest level of script your extension can run. It has access to all default APIs and all APIs that you have granted through your manifest (such scripts are called 'privileged scripts'). Background Scripts run independent of of any tabs (in fact they even have their own content process in the new Firefox), meaning that it starts its life on browser start-up (or Add-on installation) and ends its life when you close the browser (or uninstall the Add-on). The Background Script also runs across multiple browser instances (e.g. you have more than one Firefox window open at the same time). 
+Background Scripts are your go to choice for
+	
+	-  heavy lifting 
+	-  use privileged APIs. From Background Scripts you can also register to events such as website visits,
+		and then programmatically insert a script.
+
+Content Scripts are either inserted programmatically (e.g. through a Background Script) or inserted automatically (using the content_scripts manifest key) into a website. Once in, they can directly interact with the site's DOM.  
+	Content Scripts are not privileged scripts, that means they have only limited access to WebExtension APIs. 
+	Note: If you are unsure what your options are, you can find all APIs that are available to Content Scripts in this MDN article or you can always use a console.info(browser); statement and inspect its attached methods in the console.
+
+Scripts from WebExtension UIs. These include pages from *Sidebars*, Page and Browser Action popups and Developer Tools.  
+They share a similarity with Content Scripts in that they get terminated as soon as the popup/panel/sidebar is closed. Their debugging information is displayed in the debug window alongside your Background Scripts, *and they are also privileged scripts*.  
+They can load their own scripts - no need to message background
+
+You can access the scope of other priviledged scripts with browser.extension.getViews(), or the scope of the background script(s) only with browser.extension.getBackgroundPage()
+
+## Permissions
+```
+"permissions": [
+    "tabs", "storage", "https://awesome.com/*/", "notifications", "downloads"
+  ]
+```
+# Sidebar wiki
+- [X] Reads .wiki and outputs to window  
+	  All the work is in sidebar/panel.js
+	  Reference http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
+- [ ] Add markdown libraries

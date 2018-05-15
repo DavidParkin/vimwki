@@ -4,63 +4,52 @@
 
 Done as markdown-it-vimwiki\
 
-Prototype exists in testgoll as index.js  
-Scripts are render and render2 (js)  
 Currently handles `[[link]] and [[link|test]]`  
 
 
-## TODO
-- [X] Browserify
-- [X] Settle tabs versus spaces  
-	  JS now ts=2, eslintrc expects tabs and SuperRetab installed as pack plugin see
+JS now ts=2, eslintrc expects tabs and SuperRetab installed as pack plugin see
 	  [[Neovim]]
-- [X] Single versus double quotes  
-	  Single
-- [X] Needs copying and Git setting up
+## TODO
 - [X] Doesn't work with spaces in link  
 		  Gets `[[Markdown Viewer]]` etc  
 		  Suspect match yes, still a problem with generated links  
 		  Actually plugin still passing inline code to regex added test above. Block code not affected.
 		  and probaby with urls
-- [X] Needs suffix changing from html to wiki
 - [ ] Default encoding is Western instead of unicode problem with lack of html header?  
 			Needs meta adding to extension see content.js
 			Still a problem with Firefox
-- [X] Shortens first line loses words after link
-		Text not caught in regex  
-		How should this be returned?
-		Pass after link <link_open><text><link_close><text> ✓
+- [X] Shortens first line loses words after link and before link
+		- [X] Text not caught in regex  
+			How should this be returned?
+			Pass after link <link_open><text><link_close><text> ✓
+		- [X] First text not caught in regex
 - [X] Need to pass suffix .wiki/.md/.html(?) as an option
+- [o] Tests need to be done
+	- [X] Basic tests
+	- [ ] fixtures - needs work on spaces and /
+	- [X] Need test for suffix option
+- [ ] Coveralls needs investigating
+- [o] Ditto coffee
+    - [X] js2coffee seems to work
+	- [ ] role of coffee in package.json scripts
+- [ ] unifont (unrelated) - made tux appear in Airline
 
-## Regex
+## Problems with test
+```js
+node test.js                       
+/home/David/Github/markdown-it-vimwiki/index.js:96
+	md.core.ruler.push('vimwiki', vimwikiReplace(md, options));
+	  ^
+
+TypeError: Cannot read property 'core' of undefined
+    at module.exports (/home/David/Github/markdown-it-vimwiki/index.js:96:4)
+```
+This was due to having  ```var plugin('./index.js')```placed and therefore executed before md was defined
+
+
+## Regex out of date
 	pattern = /\[{2}(\w+)((\|)(\w+))?\]{2}/i;
 	pattern = /\[\[([A-Za-z1-9 ]+)?\|?(\w+)?/; Still unable to define space
-
-	```js
-		/*global module */
-
-		module.exports = function(md, options) {
-		  "use strict";
-		  md.core.ruler.push("checkbox", checkboxReplace(md, options));
-		};
-	```
-
-
-	```js
-		MarkdownIt.prototype.use = function (plugin /*, params, ... */) {
-		var args = [ this ].concat(Array.prototype.slice.call(arguments, 1));
-		plugin.apply(plugin, args);
-		return this;
-	```
-
-
-## The Gubbins  
-
-	```js
-		return Plugin(
-		/\[\[([\w\s/]+)(\|([\w\s/]+))?\]\]/,
-		(match, utils) => { — https://github.com/jsepia/markdown-it-wikilinks/blob/master/index.js
-	```
 
 
 ## Installing local node
