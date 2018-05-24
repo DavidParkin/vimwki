@@ -1,0 +1,13 @@
+# Fedora 28
+	- [o] Backup:
+		- [X] Mount
+			sudo mount /dev/sda1 /media
+		- [ ] Permanent?
+		- [ ] Github
+		- [ ] Backup jobs:
+			- [ ] 
+			- [ ] Software Source
+			- [ ] .config
+		- [X] USB:
+			- [X] Download
+			- [X] Copy live
